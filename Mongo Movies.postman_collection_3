@@ -1,0 +1,623 @@
+{
+	"info": {
+		"_postman_id": "2c5ab657-a536-4b75-8160-a337904761dc",
+		"name": "Mongo Movies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SignUp - V2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n\t\"username\": \"sachin\",\n    \"email\": \"sachin@gmail.com\",\n    \"password\": \"sachin\",\n    \"mobilenumber\" : \"7845404042\",\n    \"device_id\" :\"98798798798789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				},
+				"description": "Register"
+			},
+			"response": []
+		},
+		{
+			"name": "Profile - Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n \n    \"email_id\": \"mobile22@gmail.com\",\n    \"device_id\" :\"98798798798789\",\n    \"userimage\": \"mobile1\", \n    \"location\" : \"7845404042\",\n    \"token\" : \"token\",\n    \"mobilenumber\" : \"9965211165\"   ,\n    \"firstName\": \"AMM\",\n        \"lastName\": \"Apex\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/update/5f794f15e4b245561cc55682",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"update",
+						"5f794f15e4b245561cc55682"
+					]
+				},
+				"description": "Register"
+			},
+			"response": []
+		},
+		{
+			"name": "Profile - ChangePassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n \"old_password\" : \"yusuff\",\n \"new_password\" : \"yusuff1\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/changePassword/5f7daeaf31b52242b0db1240",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"changePassword",
+						"5f7daeaf31b52242b0db1240"
+					]
+				},
+				"description": "Register"
+			},
+			"response": []
+		},
+		{
+			"name": "Profile - forgetPassword",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n \n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/forgetPassword/5f7daeaf31b52242b0db1240",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"forgetPassword",
+						"5f7daeaf31b52242b0db1240"
+					]
+				},
+				"description": "Register"
+			},
+			"response": []
+		},
+		{
+			"name": "Movie - New Subscription (Purchase)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n\"user_id\": \"skdjfhsdjfhskjdf\",\n\"mobilenumber\": \"87878787\", \n\"cardNumber\": \"JAHABAAR\",\n\"subscribe_by_plan\": \"Dump\",\n\"subscribe_date\": \"12/12/2020\",\n\"amount\": \"200\",\n\"device\": \"897897654gkdflg497dadasd\",\n\"movieId\": \"fsdfsdfsdf\",\n\"subscribe_by_method\"  : \"cardRecharge\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/purchase/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"purchase",
+						"new"
+					]
+				},
+				"description": "Register"
+			},
+			"response": []
+		},
+		{
+			"name": "Movie -WatchNow",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n\"user_id\": \"skdjfhsdjfhskjdf\",\n\"mobilenumber\": \"87878787\", \n\n\"device\": \"897897654gkdflg497dadasd\",\n\"movieId\": \"fsdfsdfsdf\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movie/watchNow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie",
+						"watchNow"
+					]
+				},
+				"description": "Register"
+			},
+			"response": []
+		},
+		{
+			"name": "Movie - Check Subscription (Purchase)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n\"user_id\": \"skdjfhsdjfhskjdf\",\n\"movieId\": \"fsdfsdfsdf2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/purchase/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"purchase",
+						"check"
+					]
+				},
+				"description": "Register"
+			},
+			"response": []
+		},
+		{
+			"name": "Common - Add Banner",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n\"name\" :  \"Banner 1\",\n\"deatails\" : \"Banner 1\",\n\"description\" : \"Banner 1\",\n\"date\" : \"Banner 1\",\n\"valid_date\" : \"Banner 1\",\n\"valid_days\" : \"Banner 1\",\n\"image\" : \"Image URl\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/common/banner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"common",
+						"banner"
+					]
+				},
+				"description": "Register"
+			},
+			"response": []
+		},
+		{
+			"name": "Common - Get Banner",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/common/banner/5f7ac0a8884dcf35a8236aff",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"common",
+						"banner",
+						"5f7ac0a8884dcf35a8236aff"
+					]
+				},
+				"description": "Register"
+			},
+			"response": []
+		},
+		{
+			"name": "SignIn - V2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n\n    \"email\": \"sachin@gmail.com\",\n    \"password\": \"sachin\"\n   \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				},
+				"description": "Register"
+			},
+			"response": []
+		},
+		{
+			"name": "Profile - View",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/view/5f7e989e93d8c145e8849665",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"view",
+						"5f7e989e93d8c145e8849665"
+					]
+				},
+				"description": "Register"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Movie - V2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc5NGYxNWU0YjI0NTU2MWNjNTU2ODIiLCJmaXJzdE5hbWUiOiIiLCJsYXN0TmFtZSI6IiIsImVtYWlsIjoibW9iaWxlMjJAZ21haWwuY29tIiwiaWF0IjoxNjAxNzg4MzY5LCJleHAiOjE2MDE3OTU1Njl9.G3Zi_HDwFzGATq2agJZK2uQ_zAe5iC363j2zQZ8CmFE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n \"name\":\"UpCommming movie -1 \",\n    \"category\": \"movie\",\n    \"genres\": [\"action\", \"comedy\"],\n    \"language\": \"tamil\",\n    \"description\": \"Scorpion (stylized as </SCORPION>) is an American action drama television series created by Nick Santora for CBS. The series stars Elyes Gabel (Walter O'Brien), Katharine McPhee (Paige Dineen), Eddie Kaye Thomas (Tobias Curtis), Jadyn Wong (Happy Quinn), Ari Stidham (Sylvester Dodd) and Robert Patrick (Cabe Gallo). Loosely based on the life of its executive producer and self-proclaimed computer expert Walter O'Brien,[2] the series centers on O'Brien and his friends helping to solve complex global problems and save lives. The series premiered on September 22, 2014.[3][4] On October 27, 2014, CBS placed a full season episode order for the first season.[5] In March 2017, CBS renewed the series for a fourth season, which premiered on September 25, 2017.\",\n    \"rate\": \"10\",\n    \"gst\": \"10.2\",\n    \"timing\":\"160\",\n    \"year\": \"2009\",\n    \"adult_only\": true,\n    \"available_languages\": [\"tamil\", \"telugu\"],\n    \"trailer\": {\n    \t\"url\" : \"https://www.youtube.com/watch?v=U402uMSRq1g\"\n    },\n    \"released_on\": \"07/07/2019\",\n    \"uploaded_on\": null,\n    \"copyright_txt\": \"am the copy right\",\n    \"banners\": {\n      \"movie_banner_image\": \"IMage/1\" ,\n      \"movie_banner_sub_image_1\": \"IMage/1\" ,\n      \"movie_banner_sub_image_2\": \"IMage/1\" ,\n      \"movie_banner_sub_image_3\":\"IMage/1\" ,\n      \"movie_banner_sub_image_4\":\"IMage/1\" \n    \t},\n    \"actress\": [\n    \t{\n    \t  \"name\": \"Elyes Gabel\",\n        \"image\": \"IMage/1\"\n    },\n    {\n    \t  \"name\": \"Katharine McPhee\",\n        \"image\": \"IMage/1\"\n    }\n    ]\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movie/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie",
+						"new"
+					]
+				},
+				"description": "Register"
+			},
+			"response": []
+		},
+		{
+			"name": "GET MOVIES LIST - All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movie/list/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie",
+						"list",
+						"0"
+					]
+				},
+				"description": "Register"
+			},
+			"response": []
+		},
+		{
+			"name": "GET MOVIES LIST - Upcoming",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movie/list/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie",
+						"list",
+						"1"
+					]
+				},
+				"description": "Register"
+			},
+			"response": []
+		},
+		{
+			"name": "GET MOVIES LIST- Watched",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/movie/movies/2/skdjfhsdjfhskjdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movie",
+						"movies",
+						"2",
+						"skdjfhsdjfhskjdf"
+					]
+				},
+				"description": "Register"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
